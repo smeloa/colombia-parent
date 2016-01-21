@@ -16,22 +16,25 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-stylus                  # Style files will be done using Stylus
-semantic:ui             # An alternative to BootStrap and supported officialy by Meteor
-semantic:ui-css
-fabienb4:autoform-semantic-ui       # Allows aldeed:autoform to work with semantic-ui
 kadira:flow-router      # To create easy routes instead of iron-router
 kadira:blaze-layout     # Layout manager for Flow Router
+aldeed:collection2      # Allows attaching a schema to a collection
+aldeed:autoform         # Creates a form out of a schema
+zimme:active-route      # Route helper
+gwendall:auth-client-callbacks      # Adds client-side onLogin and onLogout methods
+
+stolinski:stylus-multi  # Style files will be done using Stylus
+
+twbs:bootstrap
+fortawesome:fontawesome
+accounts-ui
+accounts-password
+accounts-facebook
+
 erasaur:meteor-lodash
 spiderable              # Application can be crawled by spiders, important for this project as users will likely create new pages
 fastclick               # Faster events on mobile
 raix:handlebar-helpers  # Easy way to collect session info
-aldeed:collection2      # Allows attaching a schema to a collection
-aldeed:autoform         # Creates a form out of a schema
-iandouglas:accounts-ui-semantic-ui # Package created so that accounts-ui has semantic-ui styling, has the same functionality as accounts-ui
-accounts-password
-accounts-facebook
-zimme:active-route      # Route helper
-gwendall:auth-client-callbacks      # Adds client-side onLogin and onLogout methods
-meteortoys:allthings    # Insanely Handy Development Tools
 check                   # Check whether a value matches a pattern
+reactive-var
+meteortoys:allthings

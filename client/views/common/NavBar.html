@@ -25,6 +25,9 @@
             </ul>
           </li>
           <li><a href="#">Quienes Somos</a></li>
+          {{#if currentUser}}
+            <li><a href="#">Añadir Recurso</a></li>
+          {{/if}}  
         </ul>
         <form class="navbar-form navbar-right" role="search">
           <div class="form-group">

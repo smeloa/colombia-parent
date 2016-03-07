@@ -28,9 +28,9 @@ RecursosSchema = new SimpleSchema({
     type: String,
     label: "Descripcion"
   },
-  tags: {
+  clase: {
     type: String,
-    label: "Tipo",
+    label: "Clase",
     autoform: {
       options: [
         {"label": "Actividades", "value": "Actividades"},
@@ -38,7 +38,7 @@ RecursosSchema = new SimpleSchema({
         {"label": "Jardines", "value": "Jardines"},
       ],
       afField: {
-        firstOption: "(Selecciona un tipo)"
+        firstOption: "(Selecciona una clase)"
       }
     }
   },

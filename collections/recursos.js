@@ -4,7 +4,7 @@ RecursosIndex = new EasySearch.Index({
   collection: Recursos,
   fields: ['nombre'],
   engine: new EasySearch.MongoDB({
-    sort: () => ['nonmbre']
+    sort: () => ['nombre']
   })
 });
 
@@ -26,18 +26,14 @@ RecursosSchema = new SimpleSchema({
   },
   descripcion: {
     type: String,
-    label: "Descripcion"
+    label: "Descripción"
   },
   clase: {
     type: String,
     label: "Clase",
+    allowedValues: ["Actividades", "Colegios", "Jardines"],
     autoform: {
-      options: [
-        {"label": "Actividades", "value": "Actividades"},
-        {"label": "Colegios", "value": "Colegios"},
-        {"label": "Jardines", "value": "Jardines"},
-      ],
-      afField: {
+      afFieldInput: {
         firstOption: "(Selecciona una clase)"
       }
     }
@@ -46,16 +42,28 @@ RecursosSchema = new SimpleSchema({
     type: String,
     label: "URL"
   },
+  direccion: {
+    type: String,
+    label: "Dirección"
+  },
   createdAt: {
     type: Date,
     autoValue: function() {
-      return new Date();
-    }
+			return new Date()
+		},
+		autoform: {
+			type: "hidden"
+		}
   },
   author: {
-    type: String,
-    autoValue: function() {
-      return this.userId;
-    }
-  }
+		type: String,
+		autoValue: function() {
+			return this.userId
+		},
+		autoform: {
+			type: "hidden"
+		}
+	},
 });
+
+Recursos.attachSchema(RecursosSchema);

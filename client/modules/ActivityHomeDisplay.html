@@ -3,9 +3,9 @@
     <h1>HELLO WORLD</h1>
     <div class="container">
       <div class="row">
-        {{> ResourceCard}}
-                {{> ResourceCard}}
-                        {{> ResourceCard}}
+        {{#each recursos}}
+          {{> ResourceCard}}
+        {{/each}}
       </div>
     </div>
   </section>

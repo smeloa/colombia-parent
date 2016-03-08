@@ -1,11 +1,11 @@
-Template.ActivityHomeDisplay.onCreated(function(){
+Template.Actividades.onCreated(function(){
 	var self = this;
 	self.autorun(function(){
 		self.subscribe("recursos");
 	});
 });
 
-Template.ActivityHomeDisplay.helpers({
+Template.Actividades.helpers({
 	recursos: function() {
 		return Recursos.find({});
 	}

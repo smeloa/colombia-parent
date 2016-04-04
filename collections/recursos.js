@@ -19,6 +19,10 @@ if (Meteor.isServer) {
   });
 }
 
+AddressSchema = new SimpleSchema({
+
+})
+
 RecursosSchema = new SimpleSchema({
   nombre: {
     type: String,
@@ -45,6 +49,10 @@ RecursosSchema = new SimpleSchema({
   direccion: {
     type: String,
     label: "Dirección"
+  },
+  zip: {
+    type: String,
+    label: "Zipcode"
   },
   createdAt: {
     type: Date,

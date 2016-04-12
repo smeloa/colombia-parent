@@ -2,7 +2,7 @@ Recursos = new Mongo.Collection('recursos');
 
 RecursosIndex = new EasySearch.Index({
   collection: Recursos,
-  fields: ['nombre'],
+  fields: ['nombre', 'city', 'clase'],
   engine: new EasySearch.MongoDB({
     sort: () => ['nombre']
   })
@@ -20,7 +20,27 @@ if (Meteor.isServer) {
 }
 
 AddressSchema = new SimpleSchema({
-
+  tipo: {
+    type: String,
+    allowedValues: ["Calle", "Carrera", "Diagonal", "Transversal", "Avenida"],
+    autoform: {
+      afFieldInput: {
+        firstOption: "(Selecciona una opción)"
+      }
+    }
+  },
+  indicadortipo: {
+    type: String,
+    label: "Numero-Tipo"
+  },
+  numero: {
+    type: String,
+    label: "Numero"
+  },
+  city: {
+    type: String,
+    label: "Ciudad"
+  }
 })
 
 RecursosSchema = new SimpleSchema({
@@ -32,6 +52,10 @@ RecursosSchema = new SimpleSchema({
     type: String,
     label: "Descripción"
   },
+  fecha: {
+    type: Date,
+    label: "Fecha"
+  },
   clase: {
     type: String,
     label: "Clase",
@@ -42,17 +66,16 @@ RecursosSchema = new SimpleSchema({
       }
     }
   },
+  costo: {
+    type: Number,
+    label: "Costo"
+  },
   url: {
     type: String,
     label: "URL"
   },
   direccion: {
-    type: String,
-    label: "Dirección"
-  },
-  zip: {
-    type: String,
-    label: "Zipcode"
+    type: AddressSchema
   },
   createdAt: {
     type: Date,

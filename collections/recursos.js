@@ -1,13 +1,5 @@
 Recursos = new Mongo.Collection('recursos');
 
-RecursosIndex = new EasySearch.Index({
-  collection: Recursos,
-  fields: ['nombre', 'city', 'clase'],
-  engine: new EasySearch.MongoDB({
-    sort: () => ['nombre']
-  })
-});
-
 if (Meteor.isServer) {
   Recursos.allow({
     insert: function(userId, doc) {
@@ -41,7 +33,7 @@ AddressSchema = new SimpleSchema({
     type: String,
     label: "Ciudad"
   }
-})
+});
 
 RecursosSchema = new SimpleSchema({
   nombre: {

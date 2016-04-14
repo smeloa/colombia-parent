@@ -21,7 +21,6 @@ aldeed:collection2      # Allows attaching a schema to a collection
 aldeed:autoform         # Creates a form out of a schema
 zimme:active-route      # Route helper
 gwendall:auth-client-callbacks      # Adds client-side onLogin and onLogout methods
-easy:search
 
 stolinski:stylus-multi  # Style files will be done using Stylus
 

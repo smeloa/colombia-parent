@@ -1,3 +1,9 @@
 <template name="Jardines">
-  <h1>Hello JARDINES</h1>
+  <div class="container">
+    <div class="row">
+      {{#each recursos}}
+        {{> ResourceCard}}
+      {{/each}}
+    </div>
+  </div>
 </template>

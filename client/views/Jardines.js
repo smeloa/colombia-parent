@@ -1,12 +1,12 @@
-Template.Jardines.onCreated(function(){
+Template.Actividades.onCreated(function(){
 	var self = this;
 	self.autorun(function(){
 		self.subscribe("recursos");
 	});
 });
 
-Template.Jardines.helpers({
+Template.Actividades.helpers({
 	recursos: function() {
-		return Recursos.find({});
+		return Recursos.find({clase: "Jardines"});
 	}
 });

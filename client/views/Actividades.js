@@ -7,6 +7,6 @@ Template.Actividades.onCreated(function(){
 
 Template.Actividades.helpers({
 	recursos: function() {
-		return Recursos.find({clase: actividades});
+		return Recursos.find({clase: "Actividades"});
 	}
 });

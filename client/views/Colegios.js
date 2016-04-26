@@ -1,12 +1,12 @@
-Template.Colegios.onCreated(function(){
+Template.Actividades.onCreated(function(){
 	var self = this;
 	self.autorun(function(){
 		self.subscribe("recursos");
 	});
 });
 
-Template.Colegios.helpers({
+Template.Actividades.helpers({
 	recursos: function() {
-		return Recursos.find({});
+		return Recursos.find({clase: "Colegios"});
 	}
 });

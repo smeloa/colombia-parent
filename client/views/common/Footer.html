@@ -1,19 +1,21 @@
 <template name="Footer">
   <footer class="footer footer-distributed">
     <div class="footer-right pull-right">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
+      <!-- <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a> -->
+      <a href="https://ca.linkedin.com/in/melosantiago
+"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/smeloa"><i class="fa fa-github"></i></a>
     </div>
-
     <div class="footer-left pull-left">
       <p class="footer-links">
-        <a href="#">INICIO</a>
+        <!-- <a href="#">INICIO</a> -->
         <a href="#">QUIENES SOMOS</a>
-        <a href="#">AÑADIR RECURSO</a>
+        {{#if currentUser}}
+          <a href="#">AÑADIR RECURSO</a>
+        {{/if}}
       </p>
-      <p class="created">Padre Colombiano &copy; 2015 -- Pagina Creada por: Santiago Melo</p>
+      <p class="created">Padre Colombiano &copy; 2015 -- Pagina Creada por: <a href="https://github.com/smeloa">Santiago Melo</a></p>
     </div>
   </footer>
 </template>

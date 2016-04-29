@@ -7,6 +7,7 @@ Template.ActivityHomeDisplay.onCreated(function(){
 
 Template.ActivityHomeDisplay.helpers({
 	recursos: function() {
-		return Recursos.find({});
+		// return Recursos.find({});
+		return RecursosIndex;
 	}
 });

@@ -1,5 +1,13 @@
 Recursos = new Mongo.Collection('recursos');
 
+RecursosIndex = new EasySearch.Index({
+    collection: Recursos,
+    fields: ['clase', 'direccion.city'],
+    engine: new EasySearch.MongoDB({
+      sort: () => ['fechaStart']
+    })
+});
+
 if (Meteor.isServer) {
   Recursos.allow({
     insert: function(userId, doc) {
@@ -31,7 +39,12 @@ AddressSchema = new SimpleSchema({
   },
   city: {
     type: String,
-    label: "Ciudad"
+    allowedValues: ["Bogotá", "Medellin"],
+    autoform: {
+      afFieldInput: {
+        firstOption: "(Selecciona una opción)"
+      }
+    }
   }
 });
 
@@ -44,14 +57,18 @@ RecursosSchema = new SimpleSchema({
     type: String,
     label: "Descripción"
   },
-  fecha: {
+  fechaStart: {
     type: Date,
-    label: "Fecha"
+    label: "Fecha inicio"
+  },
+  fechaEnd: {
+    type: Date,
+    label: "Fecha fin"
   },
   clase: {
     type: String,
     label: "Tipo de actividad",
-    allowedValues: ["Teatro", "Conciertos", "Exposiciones", "Otros"],
+    allowedValues: ["Teatro", "Concierto", "Taller", "Otros"],
     autoform: {
       afFieldInput: {
         firstOption: "(Selecciona un tipo de actividad)"

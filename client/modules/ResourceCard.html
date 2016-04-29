@@ -1,11 +1,14 @@
 <template name="ResourceCard">
-  <div class="col-xs-18 col-sm-6 col-md-4">
+  <div class="col-md-4">
     <div class="thumbnail">
       <img src={{isActivity clase}}>
       <div class="caption">
         <h4>{{nombre}}</h4>
+        <h6>Tipo de actividad: {{clase}}</h6>
+        <h6>Ciudad: {{direccion.city}}</h6>
         <p>{{descripcion}}</p>
-        <p>Cuando: {{dateFormat}}</p>
+        <p>Desde: {{dateFormatStart}}</p>
+        <p>Hasta: {{dateFormatEnd}}</p>
         <p>Costo: {{costo}}</p>
         <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> -->
         <a target="_blank" href="http://maps.google.com/?q={{direccion.tipo}}+{{direccion.indicadortipo}}+%2+{{direccion.numero}}+{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>

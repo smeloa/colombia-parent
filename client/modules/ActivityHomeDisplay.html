@@ -3,10 +3,14 @@
     <div class="container">
       <h1 class="section-header text-center">ACTIVIDADES NUEVAS</h1>
       <hr class="star-light">
+      <div class="text-center search-box">
+        <label>Busca una actividad: </label>
+        {{> EasySearch.Input index=recursos}}
+      </div>
       <div class="row">
-        {{#each recursos}}
+        {{#EasySearch.Each index=recursos}}
           {{> ResourceCard}}
-        {{/each}}
+        {{/EasySearch.Each}}
       </div>
     </div>
   </section>

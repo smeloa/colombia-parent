@@ -1,14 +1,14 @@
 <template name="ResourceCard">
   <div class="col-xs-18 col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="http://placehold.it/500x250/EEE">
+      <img src={{isActivity clase}}>
       <div class="caption">
         <h4>{{nombre}}</h4>
         <p>{{descripcion}}</p>
         <p>Cuando: {{dateFormat}}</p>
         <p>Costo: {{costo}}</p>
-        <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a>
-        <a href="http://maps.google.com/?q={{direccion.tipo}}+{{direccion.indicadortipo}}+#+{{direccion.numero}}{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>
+        <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> -->
+        <a target="_blank" href="http://maps.google.com/?q={{direccion.tipo}}+{{direccion.indicadortipo}}+%2+{{direccion.numero}}+{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>
         <a target="_blank" href="{{url}}" class="btn btn-default btn-xs" role="button">Más Información</a>
       </div>
     </div>

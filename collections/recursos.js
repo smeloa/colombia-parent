@@ -50,11 +50,11 @@ RecursosSchema = new SimpleSchema({
   },
   clase: {
     type: String,
-    label: "Clase",
-    allowedValues: ["Actividades", "Colegios", "Jardines"],
+    label: "Tipo de actividad",
+    allowedValues: ["Teatro", "Conciertos", "Exposiciones", "Otros"],
     autoform: {
       afFieldInput: {
-        firstOption: "(Selecciona una clase)"
+        firstOption: "(Selecciona un tipo de actividad)"
       }
     }
   },

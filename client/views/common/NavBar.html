@@ -28,7 +28,11 @@
           {{#if currentUser}}
             <li><a href="/insertarrecurso">Añadir Recurso</a></li>
           {{/if}}
-          <li class="login">{{> loginButtons}}</li>
+          {{#if currentUser}}
+            <li class="logout"><a>Logout</a></li>
+            {{else}}
+            <li class="login-toggle"><a>Login/Sign-up</a></li>
+          {{/if}}
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

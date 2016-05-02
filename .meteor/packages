@@ -26,9 +26,9 @@ stolinski:stylus-multi  # Style files will be done using Stylus
 
 twbs:bootstrap
 fortawesome:fontawesome
-accounts-ui
+accounts-base
 accounts-password
-accounts-facebook
+useraccounts:unstyled
 
 erasaur:meteor-lodash
 spiderable              # Application can be crawled by spiders, important for this project as users will likely create new pages

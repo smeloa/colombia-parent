@@ -95,6 +95,10 @@ RecursosSchema = new SimpleSchema({
 			type: "hidden"
 		}
   },
+  telefono: {
+    type: Number,
+    label: "Telefono"
+  },
   author: {
 		type: String,
 		autoValue: function() {

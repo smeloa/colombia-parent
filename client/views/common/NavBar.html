@@ -13,7 +13,7 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <!-- <li><a href="/">Inicio</a></li> -->
           <!-- <li class="dropdown">
@@ -26,7 +26,7 @@
           </li> -->
           <li><a href="/about">Quienes Somos</a></li>
           {{#if currentUser}}
-            <li><a href="/insertarrecurso">Añadir Recurso</a></li>
+            <li class="addresource"><a href="/insertarrecurso">Añadir Recurso</a></li>
           {{/if}}
           {{#if currentUser}}
             <li class="logout"><a>Logout</a></li>

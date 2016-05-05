@@ -12,6 +12,9 @@
         <p class="card-location"><label>Ciudad:</label> {{direccion.city}}</p>
         <p class="section-two card-date"><label>Fechas:</label> {{dateFormatStart}} a {{dateFormatEnd}}</p>
         <p class="card-cost"><label>Costo:</label> {{costo}}</p>
+        <div>
+          {{> Rating}}
+        </div>
         <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> -->
         <a target="_blank" href="http://maps.google.com/?q={{direccion.tipo}}+{{direccion.indicadortipo}}+%2+{{direccion.numero}}+{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>
         <a target="_blank" href="{{url}}" class="btn btn-default btn-xs" role="button">Más Información</a>

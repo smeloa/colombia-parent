@@ -1,18 +1,25 @@
 @import "../../styles/colors.styl"
 
 .navbar
-  background-color grey
+  background-color dark-grey
   a
     color black !important
-    font-wight 700
+    font-weight 700
   a:hover
-    color pink !important
+    color blue !important
+
+
+.addresource
+  background-color rgba(254, 11, 85, 0.3)
+  a
+    color black !important
+
+.addresource:hover
+  background-color rgba(255, 102, 255, 0.3)
+  a
+    color blue !important
 
 /* Login Button Styling */
 
-.login
-  padding-top 15px
-
-#login-buttons
-  a
-    text-decoration none
+.logout, .login-toggle
+  cursor pointer

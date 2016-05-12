@@ -4,8 +4,12 @@ RecursosIndex = new EasySearch.Index({
     collection: Recursos,
     fields: ['clase', 'direccion.city'],
     engine: new EasySearch.MongoDB({
-      sort: () => ['fechaStart']
-    })
+      sort: () => ['fechaStart'],
+      selector:(searchObject, options, aggregation)=> {
+        let today = new Date()
+        return { fechaEnd: { $gt: today } };
+      }
+    }),
 });
 
 if (Meteor.isServer) {

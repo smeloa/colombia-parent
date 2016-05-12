@@ -1,5 +1,11 @@
 <template name="SubmitResourceForm">
   <div class="container">
       {{> quickForm collection="Recursos" id="insertResourceForm" type="insert" class="new-resource-form"}}
+      <!-- {{#autoForm collection="Recursos" id="insertResourceForm"  type="insert" class="new-resource-form"}}
+        <fieldset>
+          {{> afQuickField name='nombre' }}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Insert</button>
+      {{/autoForm}}  -->
   </div>
 </template>

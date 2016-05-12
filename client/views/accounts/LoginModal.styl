@@ -1,32 +1,46 @@
-.login-modal {
-    position: fixed;
-    border: solid 4px $dblue;
-    top: 20%;
-    left: 50%;
-    padding: 20px;
-    width: 50%;
-    transform: translate3d(25%, -80%, 0) scale(0.5);
-    background: #FFF;
-    opacity: 0;
-    &.open {
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
-    }
-    h3 {
-        margin-top: 0;
-    }
-    .close-login {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        cursor: pointer;
-        font-size: 2em;
-        padding: 10px 15px;
-        opacity: 0.2;
-    }
-}
+@import "../../styles/colors.styl"
 
-.at-input {
-    margin-bottom: 10px;
+.login-modal
+  position fixed
+  border solid 1px black
+  border-radius 5px
+  top 30%
+  left 50%
+  padding 20px
+  width 50%
+  transform translate3d(25%, -80%, 0) scale(0.5)
+  background #FFF
+  opacity 0
+  h3
+    margin-top: 0
+
+.close-login
+  position absolute
+  top 0
+  right 0
+  display block
+  cursor pointer
+  font-size 2em
+  padding 10px 15px
+  opacity 0.2
+
+.at-input
+  margin-bottom 5px
+
+.at-btn
+  width 30%
+  border-radius 5px
+  margin-top 20px
+  margin-bottom 20px
+  background blue
+  color black
+  font-weight 700
+
+.at-btn:hover
+  background dark-pink
+  color black
+
+&.open {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
 }

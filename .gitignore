@@ -17,6 +17,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Config files
+mup.json
+settings.json
+
 # =========================
 # Operating System Files
 # =========================

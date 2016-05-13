@@ -2,12 +2,14 @@ Recursos = new Mongo.Collection('recursos');
 
 RecursosIndex = new EasySearch.Index({
     collection: Recursos,
-    fields: ['clase', 'direccion.city'],
+    fields: ['nombre', 'direccion.city', 'clase'],
     engine: new EasySearch.MongoDB({
       sort: () => ['fechaStart'],
-      selector:(searchObject, options, aggregation)=> {
+      selector: function(searchObject, options, aggregation){
+        let selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
         let today = new Date()
-        return { fechaEnd: { $gt: today } };
+        selector.fechaEnd = { $gt: today };
+        return selector;
       }
     }),
 });

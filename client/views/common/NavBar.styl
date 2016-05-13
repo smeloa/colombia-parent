@@ -1,25 +1,22 @@
 @import "../../styles/colors.styl"
 
 .navbar
-  background-color dark-grey
+  position fixed
+  top 0
+  left 0
+  background rgba(0,0,0,0)
+  border none
+  width: 100%
   a
-    color black !important
-    font-weight 700
+    color white !important
   a:hover
-    color blue !important
+    color #f6f !important
   .navbar-brand
     font-weight 300
-    color dark-pink !important
+    color white !important
 
-.addresource
-  background-color rgba(254, 11, 85, 0.3)
-  a
-    color black !important
-
-.addresource:hover
-  background-color rgba(255, 102, 255, 0.3)
-  a
-    color blue !important
+.active
+  border-bottom 3px solid #f6f
 
 /* Login Button Styling */
 

@@ -15,6 +15,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          {{#if Template.subscriptionsReady}}
+          <li>
+            <a>{{user}}</a>
+          </li>
+          {{/if}}
           <li>
             <a href="/" class="{{isActiveRoute 'home'}}">Inicio</a>
           </li>
@@ -29,9 +34,9 @@
           <li><a href="/about" class="{{isActiveRoute 'about'}}">Quienes Somos</a></li>
           <li><a class="{{isActiveRoute 'insertarrecurso'}}" href="/insertarrecurso">Añadir Recurso</a></li>
           {{#if currentUser}}
-            <li class="logout"><a>Logout</a></li>
+            <li class="logout"><a>Cerrar Sesión</a></li>
             {{else}}
-            <li class="login-toggle"><a>Login/Sign-up</a></li>
+            <li class="login-toggle"><a>Ingresar/Registro</a></li>
           {{/if}}
         </ul>
       </div><!-- /.navbar-collapse -->

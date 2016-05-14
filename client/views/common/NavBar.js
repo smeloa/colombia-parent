@@ -9,6 +9,19 @@ Template.NavBar.onRendered(function(){
    });
 });
 
+Template.NavBar.onCreated(function(){
+	var self = this;
+	self.autorun(function(){
+		self.subscribe("users");
+	});
+});
+
+Template.NavBar.helpers({
+  user: function(){
+    return Meteor.user().emails[0].address;
+  }
+});
+
 Template.NavBar.events({
   'click .login-toggle': ()=> {
     Session.set('nav-toggle', 'open');

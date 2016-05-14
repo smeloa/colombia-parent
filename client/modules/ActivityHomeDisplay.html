@@ -1,17 +1,20 @@
 <template name="ActivityHomeDisplay">
-  <section class="activity-home-display">
-    <div class="container">
-      <h1 class="section-header text-center">ACTIVIDADES NUEVAS</h1>
-      <hr class="star-light">
-      <div class="text-center search-box">
-        <label>Busca una actividad: </label>
-        {{> EasySearch.Input index=recursos}}
-      </div>
-      <div class="row">
-        {{#EasySearch.Each index=recursos}}
-          {{> ResourceCard}}
-        {{/EasySearch.Each}}
-      </div>
-    </div>
-  </section>
+    <section class="activity-home-display">
+        <div class="container">
+            <h1 class="section-header text-center">ACTIVIDADES NUEVAS</h1>
+            <div class="text-center search-box">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        {{> EasySearch.Input index=recursos attributes=inputAttributes }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                {{#EasySearch.Each index=recursos}}
+                    {{> ResourceCard}}
+                {{/EasySearch.Each}}
+            </div>
+        </div>
+    </section>
 </template>

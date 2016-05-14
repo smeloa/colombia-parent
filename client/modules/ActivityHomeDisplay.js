@@ -6,7 +6,13 @@
 // });
 
 Template.ActivityHomeDisplay.helpers({
-	recursos: function() {
-		return RecursosIndex;
-	}
+    recursos: function() {
+        return RecursosIndex;
+    },
+    inputAttributes: function() {
+        return {
+            class: 'form-control',
+						placeholder: 'Busca una actividad...'
+        };
+    }
 });

@@ -1,24 +1,41 @@
 <template name="ResourceCard">
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <img src={{isActivity clase}}>
-      <div class="caption">
-        <h4 class="card-name text-center">{{nombre}}</h4>
-        <label>Descripción:</label>
-        <p class="card-description">{{descripcion}}</p>
-        <p class="card-type"><label>Tipo de actividad:</label> {{clase}}</p>
-        <p class="section-one card-location"><label>Direccion:</label> {{direccion.tipo}} {{direccion.indicadortipo}} #{{direccion.numero}}</p>
-        <p class="card-location"><label>Telefono:</label> {{telefono}}</p>
-        <p class="card-location"><label>Ciudad:</label> {{direccion.city}}</p>
-        <p class="section-two card-date"><label>Fechas:</label> {{dateFormatStart}} a {{dateFormatEnd}}</p>
-        <p class="card-cost"><label>Costo:</label> {{costo}}</p>
-        <!-- <div>
-          {{> Rating}}
-        </div> -->
-        <!-- <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> -->
-        <a target="_blank" href="https://www.google.com/maps/place/{{direccion.tipo}}+{{direccion.indicadortipo}}+{{direccion.numero}}+{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>
-        <a target="_blank" href="{{url}}" class="btn btn-default btn-xs" role="button">Más Información</a>
-      </div>
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <img src={{isActivity clase}}>
+            </div>
+            <div class="panel-body">
+                <h4 class="text-center card-name">{{nombre}}</h4>
+                <p>{{descripcion}}</p>
+                <p>
+                    <label>Tipo:</label>
+                    <span class="label label-default">{{clase}}</span>
+                </p>
+                <p>
+                    <label>Direccion:</label>
+                    {{direccion.tipo}}
+                    {{direccion.indicadortipo}}
+                    #{{direccion.numero}}</p>
+                <p>
+                    <label>Telefono:</label>
+                    {{telefono}}</p>
+                <p>
+                    <label>Ciudad:</label>
+                    {{direccion.city}}</p>
+                <p>
+                    <label>Fechas:</label>
+                    {{dateFormatStart}}
+                    a
+                    {{dateFormatEnd}}</p>
+                <p>
+                    <label>Costo:</label>
+                    {{costo}}</p>
+            </div>
+            <div class="panel-footer">
+              <a target="_blank" href="https://www.google.com/maps/place/{{direccion.tipo}}+{{direccion.indicadortipo}}+{{direccion.numero}}+{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>
+              <a target="_blank" href="{{url}}" class="btn btn-default btn-xs" role="button">Más Información</a>
+            </div>
+        </div>
     </div>
-  </div>
+
 </template>

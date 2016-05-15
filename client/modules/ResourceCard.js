@@ -2,10 +2,10 @@ import moment from 'moment-timezone';
 
 Template.ResourceCard.helpers({
   dateFormatStart: function() {
-    return moment(this.fechaStart).tz("Europe/London").format('MMMM Do YYYY')
+    return moment(this.fechaStart).format('DD/MM/YYYY')
   },
   dateFormatEnd: function() {
-    return moment(this.fechaEnd).tz("Europe/London").format('MMMM Do YYYY')
+    return moment(this.fechaEnd).format('DD/MM/YYYY')
   },
   isActivity: function(clase) {
       if (clase === "Teatro") {

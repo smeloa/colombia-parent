@@ -1,5 +1,5 @@
 <template name="ResourceCard">
-    <div class="col-sm-4">
+    <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <img src={{isActivity clase}}>
@@ -29,7 +29,7 @@
                     {{dateFormatEnd}}</p>
                 <p>
                     <label>Costo:</label>
-                    {{costo}}</p>
+                    ${{costCurrency}}</p>
             </div>
             <div class="panel-footer">
               <a target="_blank" href="https://www.google.com/maps/place/{{direccion.tipo}}+{{direccion.indicadortipo}}+{{direccion.numero}}+{{direccion.city}}" class="btn btn-info btn-xs" role="button">Ver Mapa</a>

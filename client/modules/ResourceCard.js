@@ -1,4 +1,5 @@
 import moment from 'moment-timezone';
+import numeral from 'numeral';
 
 Template.ResourceCard.helpers({
   dateFormatStart: function() {
@@ -6,6 +7,9 @@ Template.ResourceCard.helpers({
   },
   dateFormatEnd: function() {
     return moment(this.fechaEnd).tz("Europe/London").format('MMMM Do YYYY')
+  },
+  costCurrency: function() {
+    return numeral(this.costo).format('0,0');
   },
   isActivity: function(clase) {
       if (clase === "Teatro") {

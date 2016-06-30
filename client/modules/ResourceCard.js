@@ -3,7 +3,7 @@ import numeral from 'numeral';
 
 Template.ResourceCard.helpers({
   dateFormatStart: function() {
-    return moment(this.fechaStart).tz("Europe/London").format('MMMM Do YYYY')
+    return moment(this.fechaStart).tz("Europe/London").format('MMMM Do YYYY');
   },
   dateFormatEnd: function() {
     return moment(this.fechaEnd).tz("Europe/London").format('MMMM Do YYYY')
